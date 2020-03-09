@@ -178,9 +178,9 @@ class _BaseLineProps(HasProps):
 
 class _BaseTextProps(HasProps):
 
-    text_font = String("helvetica", help="""
+    text_font = String("Helvetica", help="""
     Name of a font to use for rendering text, e.g., ``'times'``,
-    ``'helvetica'``.
+    ``'Helvetica'``.
 
     """)
 
@@ -342,7 +342,7 @@ class TextProps(HasProps):
     '''
     base_text_props = Include(_BaseTextProps, use_prefix=False)
 
-    text_font_size = FontSizeSpec(value("12pt"))
+    text_font_size = FontSizeSpec(value("16px"))
 
     text_color = ColorSpec(default="#444444", help=_color_help % "fill text")
 
@@ -362,7 +362,7 @@ class ScalarTextProps(HasProps):
     base_text_props = Include(_BaseTextProps, use_prefix=False)
 
     # XXX not great
-    text_font_size = FontSize("12pt")
+    text_font_size = FontSize("16px")
 
     text_color = Color(default="#444444", help=_color_help % "fill text")
 
